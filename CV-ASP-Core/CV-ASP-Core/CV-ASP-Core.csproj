@@ -5,6 +5,10 @@
     <RootNamespace>CV_ASP_Core</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\data\" />
+  </ItemGroup>
+
 
 
 </Project>

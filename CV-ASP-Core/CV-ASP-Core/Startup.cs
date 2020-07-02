@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
+using CV_ASP_Core.Models;
 using CV_ASP_Core.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -43,6 +46,12 @@ namespace CV_ASP_Core {
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapRazorPages();
+                endpoints.MapGet("/companies", (context) => {
+
+                    var companies = app.ApplicationServices.GetService<JsonFileCompanyService>().GetCompanies();
+                    var json = JsonSerializer.Serialize<IEnumerable<Company>>(companies);
+                    return context.Response.WriteAsync(json);
+                });
             });
         }
     }

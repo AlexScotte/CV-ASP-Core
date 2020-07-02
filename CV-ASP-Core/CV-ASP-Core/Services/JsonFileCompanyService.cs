@@ -21,10 +21,12 @@ namespace CV_ASP_Core.Services {
 
         public IEnumerable<Company> GetCompanies() {
             using (var jsonFileReader = File.OpenText(JsonFileName)) {
-                return JsonSerializer.Deserialize<Company[]>(jsonFileReader.ReadToEnd(),
+                var myCV = JsonSerializer.Deserialize<MyCV>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions {
                         PropertyNameCaseInsensitive = true
                     });
+
+                return myCV?.Companies;
             }
         }
 

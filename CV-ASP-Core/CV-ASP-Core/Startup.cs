@@ -24,6 +24,7 @@ namespace CV_ASP_Core {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddRazorPages();
+            services.AddControllers();
             services.AddTransient<JsonFileCompanyService>();
         }
 
@@ -46,12 +47,7 @@ namespace CV_ASP_Core {
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapRazorPages();
-                endpoints.MapGet("/companies", (context) => {
-
-                    var companies = app.ApplicationServices.GetService<JsonFileCompanyService>().GetCompanies();
-                    var json = JsonSerializer.Serialize<IEnumerable<Company>>(companies);
-                    return context.Response.WriteAsync(json);
-                });
+                endpoints.MapControllers();
             });
         }
     }

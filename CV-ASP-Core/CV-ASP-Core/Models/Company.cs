@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
@@ -15,7 +16,11 @@ namespace CV_ASP_Core.Models {
         public string DateStart { get; set; }
         public string DateEnd { get; set; }
 
-        public override string ToString() => JsonSerializer.Serialize<Company>(this);
+        public IEnumerable<Client> Clients { get; set; }
 
+        public override string ToString() => System.Text.Json.JsonSerializer.Serialize<Company>(this);
+
+        [JsonIgnore]
+        public bool IsExpanded { get; set; } = true;
     }
 }

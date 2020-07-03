@@ -1,4 +1,5 @@
 ﻿@page
+@using CV_ASP_Core.Components;
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -10,18 +11,6 @@
 </div>
 
 
-<div class="card-columns">
+@(await Html.RenderComponentAsync<ExpandableList>(RenderMode.ServerPrerendered))
 
-    @foreach (var company in Model.Companies) {
-
-        <div class="card">
-
-            <div class="card-body">
-                <h5 class="card-title">
-                    @company.Name
-                </h5>
-            </div>
-
-        </div>
-    }
-</div>
+<script src="_framework/blazor.server.js"></script>

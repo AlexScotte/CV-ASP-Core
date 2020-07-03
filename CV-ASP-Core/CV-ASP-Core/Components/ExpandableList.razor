@@ -1,0 +1,45 @@
+﻿@inject CV_ASP_Core.Services.JsonFileCompanyService JsonFileCompanyService;
+@using CV_ASP_Core.Models;
+@using System.Net.Http
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.JSInterop
+
+<div class="list-group">
+
+    @foreach (var company in Companies) {
+
+        <div class="list-group-item" @onclick="(x => OnCompanySelected(company))">
+
+            <div class="card-body">
+                <h5 class="card-title">
+                    @company.Name
+                </h5>
+            </div>
+
+            @if (company.IsExpanded) {
+
+                <ExpandableListItem Company="@company" />
+            }
+
+        </div>
+    }
+</div>
+
+@code {
+
+    IEnumerable<Company> Companies { get; set; }
+
+    protected override void OnInitialized() {
+
+        Companies = JsonFileCompanyService.GetCompanies().Reverse();
+    }
+
+    void OnCompanySelected(Company selectedCompany) {
+
+        selectedCompany.IsExpanded = !selectedCompany.IsExpanded;
+    }
+}

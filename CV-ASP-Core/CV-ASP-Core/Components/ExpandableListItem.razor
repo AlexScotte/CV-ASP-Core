@@ -1,0 +1,14 @@
+﻿@using CV_ASP_Core.Models;
+
+@foreach (var client in Company.Clients) {
+
+
+    <div class="list-group-item">
+        <h5>@client.Name</h5>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Company Company { get; set; }
+}

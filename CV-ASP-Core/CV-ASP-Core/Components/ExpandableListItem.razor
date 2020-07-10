@@ -1,14 +1,87 @@
 ﻿@using CV_ASP_Core.Models;
+@using CV_ASP_Core.Components;
+@using CV_ASP_Core.Controllers;
+@using System.Net.Http
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.JSInterop
+@using Microsoft.Extensions.Localization;
+@using CV_ASP_Core.Resources;
+@inject IStringLocalizer<Resource> SharedLocalizer
 
 @foreach (var client in Company.Clients) {
 
 
-    <div class="list-group-item">
+    <div class="list-group-item"
+         @onclick="(x => OnCompanySelected(client))" @onclick:stopPropagation="true"
+         data-toggle="modal" data-target="#clientModal">
         <h5>@client.Name</h5>
+
     </div>
 }
 
+@if (selectedClient != null) {
+    <div class="modal fade" id="clientModal" tabindex="-1" role="dialog" aria-labelledby="clientTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="clientTitle">@selectedClient.Name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="logo-container" style="display:flex; align-items:center; justify-content:center;">
+                        <img src="@selectedClient.ImageUrl" style="max-height:10%; max-width:80%;" />
+                    </div>
+                </div>
+                <div class="card-body" style="text-align: center;">
+                    <h2 class="card-text">@selectedClient.Experience?.Job</h2>
+                    <h5 class="card-text">(@selectedClient.Experience?.Duration) </h5>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-text">@SharedLocalizer["xp_details_context"]:</h4>
+                    <p class="card-text">@formattedContext</p>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-text">@SharedLocalizer["xp_details_missions"]:</h4>
+                    <p class="card-text">@formattedMissions</p>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-text">@SharedLocalizer["xp_details_skills"]:</h4>
+
+                    @if (selectedClient.Experience != null) {
+                        foreach (var skill in selectedClient.Experience.Skills) {
+
+                            <div class="chip">
+                                <p>@skill.Name</p>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
 @code {
+
     [Parameter]
     public Company Company { get; set; }
+
+    private Client selectedClient = new Client();
+
+    private MarkupString formattedContext;
+    private MarkupString formattedMissions;
+
+    void OnCompanySelected(Client selectedClient) {
+
+        this.selectedClient = selectedClient;
+        formattedContext = (MarkupString)(selectedClient.Experience?.Details?.Context?.Replace("\\n", "<br/>"));
+        formattedMissions = (MarkupString)(selectedClient.Experience?.Details?.Missions?.Replace("\\n", "<br/>"));
+    }
 }

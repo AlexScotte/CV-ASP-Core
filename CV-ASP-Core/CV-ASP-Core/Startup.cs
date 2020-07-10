@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -9,9 +10,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 
 namespace CV_ASP_Core {
     public class Startup {
@@ -23,6 +27,22 @@ namespace CV_ASP_Core {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
+
+            services.AddLocalization(options => options.ResourcesPath = "");
+            services.Configure<RequestLocalizationOptions>(options => {
+
+                var supportedCultures = new List<CultureInfo> {
+                    new CultureInfo("fr-FR")
+                };
+
+                options.DefaultRequestCulture = new RequestCulture(culture: "fr-FR", uiCulture: "fr-FR");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+                //options.RequestCultureProviders = new[] {
+                //    new RouteDataRequestCultureProvider{ RouteDataStringKey = "fr-FR", UIRouteDataStringKey = "fr-FR"}
+                //};
+            });
+
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddControllers();
@@ -40,6 +60,10 @@ namespace CV_ASP_Core {
             }
 
             app.UseHttpsRedirection();
+
+            var localizationOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(localizationOptions.Value);
+
             app.UseStaticFiles();
 
             app.UseRouting();

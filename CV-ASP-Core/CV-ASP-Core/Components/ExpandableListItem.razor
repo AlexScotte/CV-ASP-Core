@@ -40,12 +40,20 @@
                 </div>
                 <div class="card-body" style="text-align: center;">
                     <h2 class="card-text">@selectedClient.Experience?.Job</h2>
-                    <h5 class="card-text">(@selectedClient.Experience?.Duration) </h5>
+
+                    @if (!string.IsNullOrEmpty(selectedClient.Experience?.Duration)) {
+                        <h5 class="card-text">(@selectedClient.Experience?.Duration)</h5>
+                    }
                 </div>
-                <div class="card-body">
-                    <h4 class="card-text">@SharedLocalizer["xp_details_context"]:</h4>
-                    <p class="card-text">@formattedContext</p>
-                </div>
+
+                @if (!string.IsNullOrEmpty(selectedClient.Experience?.Details?.Context)) {
+
+                    <div class="card-body">
+                        <h4 class="card-text">@SharedLocalizer["xp_details_context"]:</h4>
+                        <p class="card-text">@formattedContext</p>
+                    </div>
+                }
+
                 <div class="card-body">
                     <h4 class="card-text">@SharedLocalizer["xp_details_missions"]:</h4>
                     <p class="card-text">@formattedMissions</p>
@@ -81,6 +89,7 @@
     void OnCompanySelected(Client selectedClient) {
 
         this.selectedClient = selectedClient;
+
         formattedContext = (MarkupString)(selectedClient.Experience?.Details?.Context?.Replace("\\n", "<br/>"));
         formattedMissions = (MarkupString)(selectedClient.Experience?.Details?.Missions?.Replace("\\n", "<br/>"));
     }

@@ -1,0 +1,13 @@
+﻿@page
+@using CV_ASP_Core.Components;
+@model CV_ASP_Core.Pages.FormationsModel
+@foreach (var formation in Model.Formations) {
+
+    <div>
+        @formation.Name
+    </div>
+
+}
+
+<script src="_framework/blazor.server.js"></script>
+

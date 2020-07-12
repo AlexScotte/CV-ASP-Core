@@ -1,16 +1,8 @@
 ﻿@page
-@using CV_ASP_Core.Components;
-@model IndexModel
+@model CV_ASP_Core.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Index</h1>
 
-
-@(await Html.RenderComponentAsync<ExpandableList>(RenderMode.ServerPrerendered))
-
-<script src="_framework/blazor.server.js"></script>

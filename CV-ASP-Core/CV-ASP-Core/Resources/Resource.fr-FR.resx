@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="contact_tab" xml:space="preserve">
+    <value>Me contacter</value>
+  </data>
+  <data name="formations_tab" xml:space="preserve">
+    <value>Mon parcours</value>
+  </data>
+  <data name="profile_tab" xml:space="preserve">
+    <value>Mon profil</value>
+  </data>
   <data name="xp_details_context" xml:space="preserve">
     <value>Contexte</value>
   </data>
@@ -125,5 +134,8 @@
   </data>
   <data name="xp_details_skills" xml:space="preserve">
     <value>Compétences</value>
+  </data>
+  <data name="xp_tab" xml:space="preserve">
+    <value>Mes expériences professionnelles</value>
   </data>
 </root>

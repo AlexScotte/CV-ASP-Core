@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CV_ASP_Core.Pages
 {
-    public class IndexModel : PageModel
+    public class ProfileModel : PageModel
     {
         public void OnGet()
         {

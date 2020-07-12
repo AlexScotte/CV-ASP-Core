@@ -38,15 +38,13 @@ namespace CV_ASP_Core {
                 options.DefaultRequestCulture = new RequestCulture(culture: "fr-FR", uiCulture: "fr-FR");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
-                //options.RequestCultureProviders = new[] {
-                //    new RouteDataRequestCultureProvider{ RouteDataStringKey = "fr-FR", UIRouteDataStringKey = "fr-FR"}
-                //};
             });
 
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddControllers();
             services.AddTransient<JsonFileCompanyService>();
+            services.AddTransient<JsonFileFormationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

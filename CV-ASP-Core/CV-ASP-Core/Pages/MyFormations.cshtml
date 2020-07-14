@@ -1,13 +1,48 @@
 ﻿@page
 @using CV_ASP_Core.Components;
+@using CV_ASP_Core.Models;
 @model CV_ASP_Core.Pages.FormationsModel
-@foreach (var formation in Model.Formations) {
 
-    <div>
-        @formation.Name
+
+@for (int i = 0; i < Model.Formations.Count(); i++) {
+
+    var formation = Model.Formations.Reverse().ToList()[i];
+    var isLast = i == Model.Formations.Count() - 1;
+
+    <div class="row">
+
+        <div class="column left-col">
+            <h4 style="text-align: right; margin-top:5%"> @formation.Date </h4>
+        </div>
+
+        <div class="column middle-col">
+            <div Style="height: 150px; width: 150px; margin-left: 0%;">
+                @(await Html.RenderComponentAsync<HistoryPin>(RenderMode.ServerPrerendered, new { IsLast = isLast }))
+            </div>
+        </div>
+
+        <a class="right-col" href="@formation.Url"
+           style="text-decoration:none; color:black;">
+            <h4>@formation.Name</h4>
+
+            @if (string.IsNullOrEmpty(formation.Town) || string.IsNullOrWhiteSpace(formation.Town)) {
+
+                <h6 style="font-style: italic;">
+                    @($"{formation.Establishment}")
+                </h6>
+
+            } else {
+
+                <h6 style="font-style: italic;">
+                    @($"{formation.Establishment} - {formation.Town}")
+                </h6>
+            }
+            <h6>@formation.Description</h6>
+        </a>
+
     </div>
 
 }
 
-<script src="_framework/blazor.server.js"></script>
 
+<script src="_framework/blazor.server.js"></script>

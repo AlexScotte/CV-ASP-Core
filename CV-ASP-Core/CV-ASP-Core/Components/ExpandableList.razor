@@ -14,12 +14,24 @@
 
         <div class="list-group-item" @onclick="(x => OnCompanySelected(company))">
 
-            <div class="card-body">
-                <h5 class="card-title">
-                    @company.Name
-                </h5>
+            <div class="card-body" style="height:100%; ">
+                    @if (company.IsExpanded) {
+                        <div class="arrow up" style="float: left; margin-top:10px; width:10px; height:10px"></div>
+                    } else {
+                        <div class="arrow down" style="float: left; margin-top:5px; width:10px; height:10px"></div>
+                    }
+
+                    <h5 class="card-title"
+                        style="float: left; margin-left:20px;">
+                        @($"{company.Job} @ {company.Name}")
+                    </h5>
             </div>
 
+            <div style="margin-top:20px; margin-left:50px; margin-bottom:15px">
+                <h6 style="font-style:italic; text-align:left">
+                    @($"{company.DateStart} - {company.DateEnd}")
+                </h6>
+            </div>
             @if (company.IsExpanded) {
 
                 <ExpandableListItem Company="@company" />

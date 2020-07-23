@@ -380,6 +380,25 @@
       "town": "Lyon"
     }
   ],
+  "contact": {
+    "cvUrl": "https://www.cjoint.com/doc/20_06/JFcnbjRZ6sH_CV-ASCOTTE.pdf",
+    "email": "scottealexandre@gmail.com",
+    "externalLinks": [
+      {
+        "id": 0,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/alexandre-scotte/"
+      },
+      {
+        "id": 1,
+        "imageUrl": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        "name": "GitHub",
+        "url": "https://github.com/AlexScotte"
+      }
+    ],
+    "phone": "0659516792"
+  },
   "formations": [
     {
       "date": "2009",
@@ -425,5 +444,41 @@
       "town": " ",
       "url": " "
     }
-  ]
+  ],
+  "informations": {
+    "version": 1.8
+  },
+  "profile": {
+    "age": 28,
+    "backgroundImageUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/383690/f7a121a3f7a929ffb4dbc3ae241b3b4b6eaaed1d.jpg",
+    "birthDate": "25/12/1991",
+    "description": "Agé de 28 ans, je suis développeur depuis bientôt  6 ans. \nMes expériences en ESN m’ont permis de  découvrir un large panel de secteurs d’activité et  de me constituer une base solide dans les  technologies Microsoft. \nMon attrait pour le  mobile m’a dirigé naturellement vers la  technologie Xamarin tout en suivant de près ses  concurrents. ",
+    "firstName": "Alexandre",
+    "hobbies": [
+      {
+        "id": 0,
+        "name": "Sports"
+      },
+      {
+        "id": 1,
+        "name": "Basket-ball"
+      },
+      {
+        "id": 2,
+        "name": "Jeux-vidéo"
+      },
+      {
+        "id": 3,
+        "name": "Nouvelles technologies"
+      },
+      {
+        "id": 4,
+        "name": "Impression 3D"
+      }
+    ],
+    "imageUrl": "https://media-exp1.licdn.com/dms/image/C4E03AQH--XF7epzvRA/profile-displayphoto-shrink_400_400/0?e=1596067200&v=beta&t=i1y1laEKLqRiMpBV3PItmXggZA8qIabG5yLKhI2kk6s",
+    "job": "Développeur mobile / logiciel",
+    "lastName": "SCOTTE",
+    "location": "Lyon, France"
+  }
 }

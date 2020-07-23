@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Images\phone.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\phone.png" />
   </ItemGroup>
 
   <ItemGroup>

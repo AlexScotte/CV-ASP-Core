@@ -10,18 +10,22 @@ using Microsoft.Extensions.Logging;
 
 namespace CV_ASP_Core.Pages
 {
-    public class FormationsModel : PageModel
+    public class FormationsModel : ProfileModel
     {
         private readonly ILogger<FormationsModel> _logger;
         private readonly JsonFileFormationService _formationService;
+
         public IEnumerable<Formation> Formations { get; private set; }
-        public FormationsModel(ILogger<FormationsModel> logger, JsonFileFormationService formationService) {
+
+
+        public FormationsModel(ILogger<FormationsModel> logger, JsonFileFormationService formationService, ILogger<ProfileModel> baseLogger, JsonFileProfileService profilService) : base(baseLogger, profilService) {
             _logger = logger;
             _formationService = formationService;
         }
 
-        public void OnGet() {
+        public override void OnGet() {
 
+            base.OnGet();
             Formations = _formationService.GetFormations();
         }
     }

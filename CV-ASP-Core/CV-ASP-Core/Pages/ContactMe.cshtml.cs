@@ -10,18 +10,23 @@ using Microsoft.Extensions.Logging;
 
 namespace CV_ASP_Core.Pages
 {
-    public class ContactModel : PageModel
-    {
+    public class ContactModel : ProfileModel {
+
         private readonly ILogger<ContactModel> _logger;
         private readonly JsonFileContactService _contactService;
+
         public Contact Contact { get; private set; }
-        public ContactModel(ILogger<ContactModel> logger, JsonFileContactService contactService) {
+
+
+        public ContactModel(ILogger<ContactModel> logger, JsonFileContactService contactService, ILogger<ProfileModel> baseLogger, JsonFileProfileService profilService) : base(baseLogger, profilService) {
+
             _logger = logger;
             _contactService = contactService;
         }
 
-        public void OnGet() {
+        public override void OnGet() {
 
+            base.OnGet();
             Contact = _contactService.GetContact();
         }
 

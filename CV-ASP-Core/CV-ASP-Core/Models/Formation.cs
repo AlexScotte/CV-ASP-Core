@@ -13,7 +13,5 @@ namespace CV_ASP_Core.Models {
         public string Description { get; set; }
         public string Establishment { get; set; }
         public string Url { get; set; }
-
-       // public override string ToString() => System.Text.Json.JsonSerializer.Serialize<Formation>(this);
     }
 }

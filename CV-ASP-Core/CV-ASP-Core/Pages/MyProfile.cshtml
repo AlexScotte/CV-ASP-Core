@@ -1,8 +1,41 @@
-﻿@page
+﻿@page "/"
+@using CV_ASP_Core.Resources;
+@using Microsoft.Extensions.Localization;
 @model CV_ASP_Core.Pages.ProfileModel
-@{
-    ViewData["Title"] = "Profile";
-}
+@inject IStringLocalizer<Resource> SharedLocalizer
 
-<h1>Profile</h1>
+<div class="card-body">
+    <h4 class="card-text">@SharedLocalizer["me_profile"]:</h4>
+
+    @if (Model.Profile.Description != null) {
+        <p class="card-text">@Model.Profile.Description</p>
+    }
+</div>
+
+<div class="card-body">
+    <h4 class="card-text">@SharedLocalizer["me_skills"]:</h4>
+
+    @if (Model.Skills != null) {
+        foreach (var skill in Model.Skills) {
+
+            <div class="chip">
+                <p>@skill.Name</p>
+            </div>
+        }
+    }
+</div>
+
+<div class="card-body">
+    <h4 class="card-text">@SharedLocalizer["me_hobbies"]:</h4>
+
+    @if (Model.Profile.Hobbies != null) {
+        foreach (var hobby in Model.Profile.Hobbies) {
+
+            <div class="chip">
+                <p>@hobby.Name</p>
+            </div>
+        }
+    }
+</div>
+
 

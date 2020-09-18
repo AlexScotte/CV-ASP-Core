@@ -22,7 +22,7 @@ namespace CV_ASP_Core.Controllers {
         [HttpGet]
         public Profile Get() {
 
-            return _profileService.GetFormations();
+            return _profileService.GetProfile();
         }
     }
 }

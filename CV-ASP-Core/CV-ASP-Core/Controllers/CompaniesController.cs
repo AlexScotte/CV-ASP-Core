@@ -24,5 +24,11 @@ namespace CV_ASP_Core.Controllers {
 
             return _companyService.GetCompanies();
         }
+
+        [HttpGet("distinctSkills")]
+        public IEnumerable<Skill> GetDistinctSkills()
+        {
+            return _companyService.GetDistinctSkills();
+        }
     }
 }

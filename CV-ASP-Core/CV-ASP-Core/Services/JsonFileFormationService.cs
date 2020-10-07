@@ -1,5 +1,6 @@
 ﻿using CV_ASP_Core.Models;
 using Microsoft.AspNetCore.Hosting;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,13 +15,20 @@ namespace CV_ASP_Core.Services {
         }
 
         public IEnumerable<Formation> GetFormations() {
-            using (var jsonFileReader = File.OpenText(JsonFileName)) {
-                var myCV = JsonSerializer.Deserialize<MyCV>(jsonFileReader.ReadToEnd(),
-                    new JsonSerializerOptions {
-                        PropertyNameCaseInsensitive = true
-                    });
+            using (var jsonFileReader = File.OpenText(JsonFileName))
+            {
+                var json = jsonFileReader.ReadToEnd();
+                JObject jObject = JObject.Parse(json);
+                IList<Formation> formations = new List<Formation>();
+                IList<JToken> jTokens = jObject["formations"].Children().ToList();
 
-                return myCV?.Formations;
+                foreach (JToken jToken in jTokens)
+                {
+                    Formation formation = jToken.ToObject<Formation>();
+                    formations.Add(formation);
+                }
+
+                return formations;
             }
         }
     }

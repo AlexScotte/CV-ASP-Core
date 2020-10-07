@@ -1,5 +1,6 @@
 ﻿using CV_ASP_Core.Models;
 using Microsoft.AspNetCore.Hosting;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,12 +16,17 @@ namespace CV_ASP_Core.Services {
 
         public Contact GetContact() {
             using (var jsonFileReader = File.OpenText(JsonFileName)) {
-                var myCV = JsonSerializer.Deserialize<MyCV>(jsonFileReader.ReadToEnd(),
-                    new JsonSerializerOptions {
-                        PropertyNameCaseInsensitive = true
-                    });
 
-                return myCV?.Contact;
+                var json = jsonFileReader.ReadToEnd();
+                JObject jObject = JObject.Parse(json);
+                JToken jToken = jObject["contact"];
+                Contact contact = new Contact();
+                if (jToken != null){
+
+                    contact = jToken.ToObject<Contact>();
+                }
+
+                return contact;
             }
         }
     }

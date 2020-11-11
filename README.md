@@ -1,6 +1,6 @@
 # Digital resume in ASP.NET CORE / BLAZOR
 
-Website to show a digital resume to practice ASP.NET CORE and BLAZOR and show my skills
+Website to show my digital resume to practice ASP.NET CORE and BLAZOR and show my skills
 
 https://github.com/AlexScotte/CV-ASP-Core/wiki
 

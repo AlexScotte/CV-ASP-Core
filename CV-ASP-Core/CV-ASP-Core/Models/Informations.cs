@@ -7,6 +7,6 @@ namespace CV_ASP_Core.Models
 {
     public class Informations
     {
-        public string version { get; set; }
+        public float version { get; set; }
     }
 }

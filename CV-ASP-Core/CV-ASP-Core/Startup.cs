@@ -47,6 +47,7 @@ namespace CV_ASP_Core {
             services.AddTransient<JsonFileFormationService>();
             services.AddTransient<JsonFileContactService>();
             services.AddTransient<JsonFileProfileService>();
+            services.AddTransient<JsonFileInformationsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

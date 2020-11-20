@@ -5,10 +5,10 @@
         {
           "experience": {
             "details": {
-              "context": "",
-              "missions": "Développement de la logique métier du fonctionnement d’une machine d’impression textile en C# .NET et réalisation de son interface utilisateur en WPF (pattern MVVM)."
+              "context": "Tencate, premier fabricant mondial de géosynthétiques et géotextiles industriels avait besoin d’une refonte totale de son logiciel en C# WPF. \\nLe logiciel intialement développé en VB.NET permet de piloter une machine industrielle d’impression textile.",
+              "missions": "- Développement de l'interface utilisateur en WPF (Pattern MVVM) \\n- Développement de logique métier en C# .NET\\n- Réalisation de spécifications techniques\\n- Livraison des versions du logiciels\\n"
             },
-            "duration": "",
+            "duration": "1 ans 6 mois",
             "id": 0,
             "job": "Consultant .NET",
             "skills": [
@@ -31,6 +31,11 @@
                 "id": 3,
                 "important": 0,
                 "name": "MVVM"
+              },
+              {
+                "id": 4,
+                "important": 0,
+                "name": "TFS"
               }
             ]
           },
@@ -43,10 +48,10 @@
         {
           "experience": {
             "details": {
-              "context": "",
-              "missions": "Refonte d’un logiciel de détecteurs infrarouges développé en VB6 vers C# (Framework .Net) avec reprogrammation de l’interface utilisateur en WPF (pattern MVVM)."
+              "context": "Sofradir, fabricant de détecteurs infrarouges pour la défense et l’aérospatiale, avait besoin d’une refonte totale de son logiciel en C# WPF. \\nLe logiciel intialement développé en VB6 permet de piloter la séquence de test de ses détecteurs. ",
+              "missions": "- Développement de l'interface utilisateur en WPF (Pattern MVVM) \\n- Développement de logique métier en C# .NET\\n- Réalisation de spécifications techniques\\n- Livraison des versions du logiciels \\n- Test du logiciel sur machine réelle en salle blanche"
             },
-            "duration": "",
+            "duration": "6 mois",
             "id": 0,
             "job": "Consultant .NET",
             "skills": [
@@ -69,6 +74,11 @@
                 "id": 3,
                 "important": 0,
                 "name": "MVVM"
+              },
+              {
+                "id": 4,
+                "important": 0,
+                "name": "TFS"
               }
             ]
           },
@@ -93,7 +103,7 @@
           "experience": {
             "details": {
               "context": "Pour son client depuis plus de 6 ans Peaks a développé un logiciel de gestion de patrimoine et de prédiction d'incidents des réseaux d'eau.\\nIntégré à l'équipe (de 2 à 4 personnes) en charge du développement et de la pérennisation du logiciel, ma mission était de participer à la maintenance du logiciel (TMA) et au développement des évolutions (sous forme de lot)",
-              "missions": "- Développement de logique métier en C# .NET\\n    - Import de données de type géodatabase dans le logiciel\\n    - Affichage des géométries sur une carte\\n    - Export de données dans le format csv/shapefile/gdb/access\\n    - intégration de nouveaux types de données en base provenant de fichiers d'intervention fournit par le client\\n- Développement de l'interface graphique en WPF (Pattern MVVM)\\n    - Nouvelle architecture\\n    - Refonte d'une partie de l'UI\\n- Correction d'anomalies dans l'application\\n- Réalisation de spécifications techniques\\n- Chiffrage des nouvelles fonctionnalités à intégrer dans les nouveaux lots\\n- Livraison des lots effectués\\n"
+              "missions": "- Développement de logique métier en C# .NET\\n- Import de données de type géodatabase dans le logiciel\\n- Affichage des géométries sur une carte\\n- Export de données dans le format csv/shapefile/gdb/access\\n- Intégration de nouveaux types de données en base provenant de fichiers d'intervention fournit par le client\\n- Développement de l'interface utilisateur en WPF (Pattern MVVM) \\n- Nouvelle architecture\\n- Refonte d'une partie de l'UI avec Prism\\n- Correction d'anomalies dans l'application\\n- Réalisation de spécifications techniques\\n- Chiffrage des nouvelles fonctionnalités à intégrer dans les nouveaux lots\\n- Livraison des lots effectués"
             },
             "duration": "1 an 5 mois",
             "id": 0,
@@ -123,6 +133,26 @@
                 "id": 4,
                 "important": 1,
                 "name": "SQL Server"
+              },
+              {
+                "id": 5,
+                "important": 0,
+                "name": "Entity Framework"
+              },
+              {
+                "id": 6,
+                "important": 0,
+                "name": "Jira"
+              },
+              {
+                "id": 6,
+                "important": 0,
+                "name": "GitHub"
+              },
+              {
+                "id": 6,
+                "important": 0,
+                "name": "ArcGis Engine"
               }
             ]
           },
@@ -135,8 +165,8 @@
         {
           "experience": {
             "details": {
-              "context": "GiSmartware, un éditeur de logiciels de système d'information géographique avait un besoin en assistance technique pour maintenir et faire évoluer son logiciel.\\nIntégré à l'équipe (6 personnes) en charge du logiciel NETGEO Rail pour la SNCF, ma mission était de participer aux développements des nouvelles fonctionnalités et aux correctifs des anomalies.",
-              "missions": "- Développement C# .NET\\n- Développement de fonctionnalités cartographiques avec ESRI ArcEngine\\n- Développement d'interface graphique en WPF (pattern MVVM)\\n- Développement de web services WCF .NET\\n- Corrections d'anomalies dans l'application\\n"
+              "context": "GiSmartware, éditeur de logiciels de système d'information géographique avait un besoin en assistance technique pour maintenir et faire évoluer son logiciel. \\nIntégré à l'équipe (6 personnes) en charge du logiciel NETGEO Rail pour la SNCF, ma mission était de participer aux développements des nouvelles fonctionnalités et aux correctifs des anomalies.",
+              "missions": "- Développement d'interface utilisateur en WPF (pattern MVVM) \\n- Développement  C# .NET\\n- Développement de fonctionnalités cartographiques avec ESRI ArcGIS Engine\\n- Développement de web services WCF .NET (Serveur PostGreSQL, requête SOAP, ORM NHibernate) \\n- Corrections d'anomalies dans le logiciel"
             },
             "duration": "9 mois",
             "id": 0,
@@ -165,22 +195,27 @@
               {
                 "id": 4,
                 "important": 1,
-                "name": "IIS"
+                "name": "PostgreSQL"
               },
               {
                 "id": 5,
                 "important": 0,
-                "name": "ESRI ArcEngine"
+                "name": "IIS"
               },
               {
                 "id": 6,
-                "important": 1,
-                "name": "WCF"
+                "important": 0,
+                "name": "NHibernate"
               },
               {
                 "id": 7,
                 "important": 0,
                 "name": "TFS"
+              },
+              {
+                "id": 7,
+                "important": 0,
+                "name": "ArcGis Engine"
               }
             ]
           },
@@ -193,8 +228,8 @@
         {
           "experience": {
             "details": {
-              "context": "Remedee, start-up dévouée au développement de solutions améliorant la qualité de vie avait un besoin assez urgent d'assistance technique.\\nEn vue d'une livraison d'une nouvelle version de leur application permettant de communiquer avec un objet connecté, ma mission était de corriger les anomalies du logiciel et de développer les différentes évolutions.\\n(équipe composée d'un seul développeur)",
-              "missions": "- Développement de logique métier en C# .NET\\n    - Ajout de la récupération des données GPS du téléphone\\n    - Enregistrement de cette localisation sur un serveur (REST)\\n    - Ajout d'un système de notification hebdomadaire (Firebase Cloud Messaging)\\n- Développement de contrôles personnalisés en Xamarin.Forms\\n- Mise en place de tests automatisés pour l'application Xamarin en local et sur la plateforme Test Cloud\\n- Correction d'anomalies dans l'interface graphique\\n- Correction d'anomalies dans les communications avec l'objet connecté\\n"
+              "context": "Remedee, startup ayant conçu le premier stimulateur d’endorphine à usage individuel avait un besoin assez urgent d'assistance technique.\\nEn vue d'une livraison d'une nouvelle version de leur application permettant de communiquer avec leur bracelet connecté, ma mission était de corriger les anomalies du logiciel et de développer les différentes évolutions.\\n(équipe composée d'un seul développeur)",
+              "missions": "- Développement de nouvelles vues et de contrôles personnalisés en Xamarin.Forms\\n- Ajout de la récupération des données GPS du téléphone \\n- Enregistrement de cette localisation sur un serveur (REST) \\n- Ajout d'un système de notification hebdomadaire (Firebase Cloud Messaging) \\n- Mise en place de tests automatisés pour l'application Xamarin en local et sur la plateforme Test Cloud\\n- Correction d'anomalies dans l'interface utilisateur\\n- Correction d'anomalies dans les communications avec l'objet connecté"
             },
             "duration": "5 mois",
             "id": 0,
@@ -267,8 +302,8 @@
         {
           "experience": {
             "details": {
-              "context": "Resolving, accélérateur digital des métiers de l'immobilier et de la construction, recherchait à renforcer son équipe de développeur mobile en vue d'une livraison pour ses clients.",
-              "missions": "- Développement des évolutions et maintenance de l'application en C# et Xamarin. \\n - Reprise de l’architecture MVVM de l’application. \\n - Amélioration des performances, de l’UX et de la fluidité de l’application. \\n - Amélioration de l’UI (Contrôles personnalisés avec SkiaSharp). \\n - Mise en place d’un store d’application d’entreprise pour la version android. \\n - Mise en place de tests automatisés et de remontées d’informations via Sentry et l’app center de Microsoft. \\n"
+              "context": "Resolving, éditeur de logiciel ayant développé une plateforme collaborative pour faciliter la gestion des projets de construction, recherchait à renforcer son équipe de développeur mobile (2 développeurs) en vue d'une livraison pour ses clients. ",
+              "missions": "- Développement des évolutions et maintenance du logiciel en C# et Xamarin. \\n- Reprise de l’architecture MVVM de l’application. \\n- Amélioration des performances, de l’UX et de la fluidité de l’application. \\n- Amélioration de l’UI (Contrôles personnalisés/graphiques avec SkiaSharp). \\n- Mise en place d’un store d’application d’entreprise pour la version android.\\n- Mise en place de tests automatisés et de remontées d’informations via Sentry et l’app center de Microsoft."
             },
             "duration": "1 an 4 mois",
             "id": 0,
@@ -361,6 +396,11 @@
                 "id": 2,
                 "important": 1,
                 "name": "Realm"
+              },
+              {
+                "id": 3,
+                "important": 1,
+                "name": "ASP .NET Core"
               }
             ]
           },
@@ -438,6 +478,7 @@
     },
     {
       "date": "2017",
+      "description": " ",
       "establishment": "Microsoft Xamarin University",
       "id": 4,
       "name": "Certification Xamarin",

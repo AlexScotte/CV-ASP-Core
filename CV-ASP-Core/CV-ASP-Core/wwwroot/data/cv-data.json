@@ -299,6 +299,107 @@
     },
     {
       "clients": [
+	  				        {
+          "experience": {
+            "details": {
+              "context": "KaribU Gestion, spécialiste dans la gestion administrative de régimes collectifs avait un besoin technique pour concevoir et réaliser une application web de gestion administrative intelligente pour palier aux faiblesses et limites des logiciels actuelles.  \\n(équipe composée de 2 développeurs)",
+              "missions": "- Conception et réalisation des interfaces utilisateurs à l'aide de Blazor web assembly, (.NET 5, C# 9.0) \\n- Développement des services web avec ASP.NET Core (5+) et entity framework core (5+)."
+            },
+            "duration": "8 mois",
+            "id": 0,
+            "job": "Consultant .NET (C#/Blazor)",
+            "skills": [
+              {
+                "id": 0,
+                "important": 1,
+                "name": "Blazor"
+              },
+              {
+                "id": 1,
+                "important": 1,
+                "name": "C#"
+              },
+              {
+                "id": 2,
+                "important": 1,
+                "name": ".NET"
+              },
+              {
+                "id": 3,
+                "important": 1,
+                "name": "ASP .NET Core"
+              },
+			                {
+                "id": 4,
+                "important": 0,
+                "name": "Entity Framework Core"
+              },
+			                {
+                "id": 5,
+                "important": 0,
+                "name": "SQL Server"
+              },
+			                {
+                "id": 6,
+                "important": 0,
+                "name": "Telerik"
+              }
+            ]
+          },
+          "id": 2,
+          "imageUrl": "https://media-exp1.licdn.com/dms/image/C560BAQHV48G5QONg4A/company-logo_200_200/0/1607355040125?e=1651708800&v=beta&t=ynJB_4v-O7klJuSo0_EU_0fhC2s4_ePw0LCj0tmXWXs",
+          "location": "Lyon (69)",
+          "name": "KaribU Gestion",
+          "site": "https://www.also-consulting.fr/gestion-administrative/"
+        },
+	  		        {
+          "experience": {
+            "details": {
+              "context": "Everial, expert en matière de conservation, traitement et valorisation de documents avait un besoin d'assistance technique pour maintenir et faire évoluer son logiciel de gestion d'archivage et pour développer une nouvelle solution mobile de traçage des archives. \\n(équipe composée de 10 développeurs)",
+              "missions": "- Correctifs et évolutions du logiciel de gestion d'archivage en C#/WPF \\n- Correctifs et évolutions de l'application de scannage des archives utilisée par les opérateurs sur site en Xamarin \\n- Développement d'un POC en Xamarin pour une solution mobile permettant de faciliter la livraison et le traçage des archives chez les clients."
+            },
+            "duration": "6 mois",
+            "id": 0,
+            "job": "Consultant .NET (Xamarin/C#/WPF)",
+            "skills": [
+              {
+                "id": 0,
+                "important": 1,
+                "name": "Xamarin"
+              },
+              {
+                "id": 1,
+                "important": 1,
+                "name": "WPF"
+              },
+              {
+                "id": 2,
+                "important": 1,
+                "name": "C#"
+              },
+              {
+                "id": 3,
+                "important": 1,
+                "name": ".NET"
+              },
+			                {
+                "id": 4,
+                "important": 0,
+                "name": "NHibernate"
+              },
+			                {
+                "id": 5,
+                "important": 0,
+                "name": "SQL Server"
+              }
+            ]
+          },
+          "id": 1,
+          "imageUrl": "https://www.documation.fr/logo/31561462b6b52eceverial_logo_quadri_300dpi.png",
+          "location": "Rillieux-la-Pape (69)",
+          "name": "Everial",
+          "site": "https://www.everial.com/"
+        },
         {
           "experience": {
             "details": {
@@ -404,12 +505,12 @@
               }
             ]
           },
-          "id": 1,
+          "id": 99,
           "imageUrl": "",
           "location": "",
           "name": "Perso",
           "site": ""
-        }
+        },
       ],
       "dateEnd": "Aujourd'hui",
       "dateStart": "Janvier 2019",
@@ -487,13 +588,13 @@
     }
   ],
   "informations": {
-    "version": 1.8
+    "version": 1.9
   },
   "profile": {
-    "age": 28,
+    "age": 30,
     "backgroundImageUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/383690/f7a121a3f7a929ffb4dbc3ae241b3b4b6eaaed1d.jpg",
     "birthDate": "25/12/1991",
-    "description": "Agé de 28 ans, je suis développeur depuis 6 ans. \nMes expériences en ESN m’ont permis de  découvrir un large panel de secteurs d’activité et  de me constituer une base solide dans les  technologies Microsoft. \nMon attrait pour le  mobile m’a dirigé naturellement vers la  technologie Xamarin tout en suivant de près ses  concurrents. ",
+    "description": "Développeur depuis 7 ans. Mes expériences en ESN/SS2I m’ont permis de découvrir un large panel de secteurs d’activité et de me constituer une base solide dans les technologies Microsoft qui me permettent aujourd’hui aussi bien d’intervenir ou de concevoir des applications mobiles, des sites ou applications web ainsi que des logiciels de bureau.",
     "firstName": "Alexandre",
     "hobbies": [
       {
@@ -515,9 +616,17 @@
       {
         "id": 4,
         "name": "Impression 3D"
+      },
+	        {
+        "id": 5,
+        "name": "Crypto-monnaies"
+      },
+	  	        {
+        "id": 6,
+        "name": "Blockchain"
       }
     ],
-    "imageUrl": "https://www.cjoint.com/doc/20_10/JJmpvXbbWfH_0.jpg",
+    "imageUrl": "https://www.cjoint.com/c/LAFnsiN17JL",
     "job": "Développeur mobile / logiciel",
     "lastName": "SCOTTE",
     "location": "Lyon, France"
